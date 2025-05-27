@@ -3,7 +3,6 @@ import arrowLeft from "../assets/icons/arrow-left.svg";
 import arrowRight from "../assets/icons/arrow-right.svg";
 
 const CarouselArrows = ({ instanceRef, currentSlide }) => {
-  const totalSlides = instanceRef.current?.track.details.slides.length || 0;
 
   return (
     <>
@@ -11,7 +10,7 @@ const CarouselArrows = ({ instanceRef, currentSlide }) => {
         <button
           className="carousel-arrow left"
           onClick={() => instanceRef.current.prev()}>
-          <img src={arrowLeft} alt="Left" />
+          <img src={arrowLeft} alt="Left Arrow" />
         </button>
       )}
 
@@ -21,7 +20,7 @@ const CarouselArrows = ({ instanceRef, currentSlide }) => {
           <button
             className="carousel-arrow right"
             onClick={() => instanceRef.current.next()}>
-            <img src={arrowRight} alt="Right" />
+            <img src={arrowRight} alt="Right Arrow" />
           </button>
         )}
     </>
