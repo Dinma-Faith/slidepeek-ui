@@ -2,7 +2,7 @@
 
 A lightweight, responsive image carousel built using [`keen-slider`](https://keen-slider.io/) in React. This setup features:
 
-- Custom container boxes instead of images
+- Custom container boxes
 - Horizontal sliding with partially visible next slide
 - Arrow navigation with custom icons from Figma
 - Conditional rendering of navigation arrows
