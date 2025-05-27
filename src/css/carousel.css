@@ -1,0 +1,65 @@
+@import "./reset.css";
+@import "./rootstyles.css";
+
+.carousel-wrapper {
+  position: relative;
+  padding-inline: 2rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+}
+
+.carousel-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-box {
+  width: 100%;
+  height: 400px;
+  background-color: var(--white);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  cursor: pointer;
+  border: none;
+  z-index: 10;
+  opacity: 1;
+  transition: background 0.3s ease, opacity 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-arrow img {
+  width: 24px;
+  height: 30px;
+}
+
+
+.carousel-wrapper:hover .carousel-arrow {
+  display: block;
+}
+
+.carousel-arrow.left {
+  left: 2rem;
+}
+
+.carousel-arrow.right {
+  right: 2rem;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
