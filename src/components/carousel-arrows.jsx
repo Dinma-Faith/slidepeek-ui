@@ -1,32 +1,27 @@
-import React from "react";
-import ArrowLeft from "../assets/icons/arrow-left.svg";
-import ArrowRight from "../assets/icons/arrow-right.svg";
+import arrowLeft from "../assets/icons/arrow-left.svg";
+import arrowRight from "../assets/icons/arrow-right.svg";
 
 const CarouselArrows = ({ instanceRef, currentSlide }) => {
-  if (!instanceRef.current) return null;
-
-  const totalSlides = instanceRef.current.track.details.slides.length;
-
-  const showLeftArrow = currentSlide > 0;
-  const showRightArrow = currentSlide < totalSlides - 1;
+  const totalSlides = instanceRef.current?.track.details.slides.length || 0;
 
   return (
     <>
-      {showLeftArrow && (
+      {instanceRef.current && currentSlide > 0 && (
         <button
           className="carousel-arrow left"
           onClick={() => instanceRef.current.prev()}>
-          <img src={ArrowLeft} alt="Previous" />
+          <img src={arrowLeft} alt="Left" />
         </button>
       )}
 
-      {showRightArrow && (
-        <button
-          className="carousel-arrow right"
-          onClick={() => instanceRef.current.next()}>
-          <img src={ArrowRight} alt="Next" />
-        </button>
-      )}
+      {instanceRef.current &&
+        instanceRef.current.track.details.rel < totalSlides - 1 && (
+          <button
+            className="carousel-arrow right"
+            onClick={() => instanceRef.current.next()}>
+            <img src={arrowRight} alt="Right" />
+          </button>
+        )}
     </>
   );
 };
