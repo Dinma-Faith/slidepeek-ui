@@ -19,8 +19,29 @@ A lightweight, responsive image carousel built using [`keen-slider`](https://kee
 - CSS Modules or plain CSS
 - Vite (recommended for fast development)
 
----
+## 📊 Carousel Implementation
+We implemented a custom image carousel using the Keen Slider library.
 
+## 🧩 Why Keen Slider?
+After evaluating a few popular React carousel libraries — including keen-slider, swiper, and the option of building a custom solution — we chose Keen Slider for the following reasons:
+
+- 📦 Lightweight: Keen Slider has a small bundle size compared to alternatives like Swiper, helping to keep page performance optimized.
+
+- 🎯 Feature-Rich Yet Minimal: It provides exactly what we need — including:
+
+    Slide tracking
+
+    Partial slide visibility
+
+    Responsive and swipe/touch support
+
+- 🛠️ Fine-Grained Control: Keen gives us the flexibility to create a custom layout with one full and one partially visible box, which was harder to achieve with more opinionated libraries.
+
+-  💡 Strong Developer Experience: It offers a flexible API and clean documentation, making it easier to implement custom logic such as conditional arrow visibility and stylized navigation.
+
+-  🔄 Actively Maintained: With solid documentation, community support, and ongoing updates, it presents low risk of technical debt.
+
+📚 Documentation: https://keen-slider.io/docs
 
 ---
 
@@ -48,7 +69,7 @@ cd slidepeek-ui
 # or
 - yarn dev
 
-🤝 Contributing
+## 🤝 Contributing
 - Feel free to fork this project and submit a pull - request! To contribute:
 
 - Fork the repo
@@ -61,5 +82,5 @@ cd slidepeek-ui
 
 - Open a Pull Request
 
-📝 License
+## 📝 License
 - MIT License. See LICENSE file for details.
